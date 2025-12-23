@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   description:
     "Context-Preserving Adaptive Manipulation (CPAM), a novel zero-shot framework for complicated, non-rigid real image editing.",
   icons: {
-    icon: "/magic_wand.png",
-    shortcut: "/magic_wand.png",
-    apple: "/magic_wand.png",
+    icon: "/CPAM.github.io/magic_wand.png",
+    shortcut: "/CPAM.github.io/magic_wand.png",
+    apple: "/CPAM.github.io/magic_wand.png",
   },
 };
 
