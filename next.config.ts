@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'PANDORA';
+const repoName = 'CPAM';
 
 const nextConfig = {
   output: 'export',
