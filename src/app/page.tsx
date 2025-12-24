@@ -5,6 +5,8 @@ import QuantitativeTable from "./components/QuantitativeTable";
 import fs from "fs";
 import path from "path";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default async function Home() {
   // Discover all result triplets in public/results at build/render time
   const resultsDir = path.join(process.cwd(), "public", "results");
@@ -53,7 +55,7 @@ export default async function Home() {
           <h1 className="text-4xl md:text-5xl lg:text-5xl font-normal leading-tight mb-8 px-4 flex flex-col items-center">
             <span className="flex items-center gap-2">
               <span className="bg-gradient-to-r from-black via-yellow-400 to-cyan-400 bg-clip-text text-transparent">CPAM</span>
-              <img src="/magic_wand.png" alt="Eraser" className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 inline-block" />
+              <img src={`${basePath}/magic_wand.png`} alt="Eraser" className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 inline-block" />
               <span className="text-cyan-600">: Context-Preserving Adaptive Manipulation</span>
             </span>
             <span className="text-cyan-600">for Zero-Shot Real Image Editing</span>
@@ -143,7 +145,7 @@ export default async function Home() {
           </div>
                     {/* Teaser Image - At the very top */}
           <div className="mb-12">
-            <img src="/teaser.png" alt="CPAM Teaser" className="w-full max-w-4xl mx-auto rounded-lg shadow-lg" />
+            <img src={`${basePath}/teaser.png`} alt="CPAM Teaser" className="w-full max-w-4xl mx-auto rounded-lg shadow-lg" />
           </div>
         </div>
       </section>
@@ -190,7 +192,7 @@ export default async function Home() {
               <div className="bg-white rounded-lg p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-center mb-4 text-gray-800">Overall Architecture</h3>
                 <img
-                  src="/Overall_Pipeline.png"
+                  src={`${basePath}/Overall_Pipeline.png`}
                   alt="Overall Pipeline Diagram"
                   className="w-full h-auto rounded"
                 />
@@ -198,7 +200,7 @@ export default async function Home() {
               <div className="bg-white rounded-lg p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-center mb-4 text-gray-800">Detail Mechanism</h3>
                 <img
-                  src="/detail_mechanism.png"
+                  src={`${basePath}/detail_mechanism.png`}
                   alt="Detail Mechanism Diagram"
                   className="w-full h-auto rounded"
                 />
@@ -209,7 +211,7 @@ export default async function Home() {
             <div className="bg-white rounded-lg p-6 border border-gray-200">
               <h3 className="text-lg font-semibold text-center mb-4 text-gray-800">Zero-Shot Editing Algorithm</h3>
               <img
-                src="/algorithm.png"
+                src={`${basePath}/algorithm.png`}
                 alt="Zero-Shot Editing Algorithm"
                 className="w-full h-auto rounded"
               />
@@ -230,7 +232,7 @@ export default async function Home() {
           {/* Qualitative Comparison Image */}
           <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
             <img
-              src="/qualitative.png"
+              src={`${basePath}/qualitative.png`}
               alt="Qualitative comparison of object removal methods"
               className="w-full h-auto rounded shadow-lg"
             />
@@ -518,7 +520,7 @@ export default async function Home() {
               muted
               playsInline
             >
-              <source src="/demo_video.mp4" type="video/mp4" />
+              <source src={`${basePath}/demo_video.mp4`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -552,7 +554,7 @@ export default async function Home() {
                   iCONTRA Paper →
                 </a>
                 <div className="mt-4">
-                <img src="/interface.png" alt="iCONTRA Teaser" className="w-full h-auto rounded shadow-lg" />
+                <img src={`${basePath}/interface.png`} alt="iCONTRA Teaser" className="w-full h-auto rounded shadow-lg" />
                 </div>
               </div>
             </div>
@@ -574,7 +576,7 @@ export default async function Home() {
                 </a>
               </div>
               <div className="mt-4">
-                <img src="/teaser_epedit.png" alt="EPEdit Teaser" className="w-full h-auto rounded shadow-lg" />
+                <img src={`${basePath}/teaser_epedit.png`} alt="EPEdit Teaser" className="w-full h-auto rounded shadow-lg" />
               </div>
             </div>
           </div>
@@ -601,7 +603,7 @@ export default async function Home() {
                 Visit PANDORA →
               </a>
               <div className="mt-4">
-                <img src="/teaser_Pandora.png" alt="PANDORA Project Teaser" className="w-full h-auto rounded shadow-lg" />
+                <img src={`${basePath}/teaser_Pandora.png`} alt="PANDORA Project Teaser" className="w-full h-auto rounded shadow-lg" />
               </div>
             </div>
 
@@ -621,7 +623,7 @@ export default async function Home() {
 
               </div>
               <div className="mt-4">
-                <img src="/teaser_focusdiff.png" alt="FocusDiff Teaser" className="w-full h-auto rounded shadow-lg" />
+                <img src={`${basePath}/teaser_focusdiff.png`} alt="FocusDiff Teaser" className="w-full h-auto rounded shadow-lg" />
               </div>
             </div>
           </div>
